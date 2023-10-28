@@ -161,3 +161,5 @@ cython_debug/
 
 # Input for puzzles
 *.txt
+*.sh
+aoc.py
