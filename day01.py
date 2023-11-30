@@ -1,3 +1,3 @@
 import aoc
 
-data = aoc.
+data = aoc.get_int(1)
