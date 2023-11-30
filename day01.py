@@ -1,3 +1,3 @@
 import aoc
 
-data = aoc.load(1)
+data = aoc.
