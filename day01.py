@@ -28,7 +28,11 @@ def two_digit_2(str):
         str = str.replace(numbers[k], numbers[k] + k.__str__() + numbers[k])
     return two_digit_1(str)
 
-for i in range(len(data)):
-    num.append(two_digit_2(data[i]))
-
-print(sum(num))
+res = 0
+if False:
+    for i in range(len(data)):
+        res += two_digit_1(data[i])
+if True:
+    for i in range(len(data)):
+        res += two_digit_2(data[i])
+print(res)
