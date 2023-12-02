@@ -1,5 +1,6 @@
 import aoc
 import re
+
 data = aoc.get_lst(1)
 num = []
 numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
