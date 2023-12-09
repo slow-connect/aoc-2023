@@ -8,6 +8,7 @@ if True:
     data = [51926890, 222203111261225]
     # data = [71530, 940200]
 
+
 over_max = 0
 for i in tqdm(range((data[0]))):
     if i*(data[0]-i) > data[1]:
