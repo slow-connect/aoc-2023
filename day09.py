@@ -6,6 +6,7 @@ data = aoc.get_lst(9)[:-1]
 # print(data)
 
 
+part1 = True
 ans = 0
 for line in data:
     val = line.split()
@@ -13,29 +14,13 @@ for line in data:
     for k in range(len(val)):
         mat[0][k] = int(val[k])
     for i in range(1, len(val)):
-        for j in range(len(val)-i):
-            mat[i][j] = mat[i-1][j+1] - mat[i-1][j]
+        for j in range(i, len(val)):
+            mat[i][j] = mat[i-1][j] - mat[i-1][j-1]
         if sum(mat[i]) == 0:
-            ans += int(sum(mat[_][0]*(-1)**_ for _ in range(len(val))))
+            if part1 == False:
+                ans += int(sum(mat[_][_]*(-1)**_ for _ in range(len(val))))
+            else:
+                ans += int(sum(mat[_][-1] for _ in range(len(val))))
             break
 
 print(ans)
-
-
-
-
-def part1():
-    ans = 0
-    for line in data:
-        val = line.split()
-        mat = np.zeros((len(val), len(val)))
-        for k in range(len(val)):
-            mat[0][k] = int(val[k])
-        for i in range(1, len(val)):
-            for j in range(i, len(val)):
-                mat[i][j] = mat[i-1][j] - mat[i-1][j-1]
-            if sum(mat[i]) == 0:
-                ans += int(sum(mat[_][-1] for _ in range(len(val))))
-                break
-
-    print(ans)
