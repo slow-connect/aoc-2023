@@ -2,6 +2,8 @@ import aoc
 
 data = aoc.get_lst(10)
 # data = "7-F7-\n.FJ|7\nSJLL7\n|F--J\nLJ.LJ".split('\n')
+data = ".F----7F7F7F7F-7....\n .|F--7||||||||FJ....\n.||.FJ||||||||L7....\nFJL7L7LJLJ||LJ.L-7..\nL--J.L7...LJS7F-7L7.\n....F-J..F7FJ|L7L7L7\n....L7.F7||L7|.L7L7|\n.....|FJLJ|FJ|F7|.LJ\n....FJL-7.||.||||...\n....L---J.LJ.LJLJ...\n"
+
 data.insert(0, '.'*(len(data[0])+2))
 data.append('.'*(len(data[0]) + 1))
 for i in range(1, len(data)-1):
